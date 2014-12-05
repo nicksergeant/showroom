@@ -1,3 +1,7 @@
+compile:
+	node_modules/browserify/bin/cmd.js -t reactify static/src/app.js -o static/dist/bundle.js -v
+	node_modules/jsmin/bin/jsmin static/dist/bundle.js > static/dist/bundle.min.js
+
 deploy:
 	docker build -t showroom/ui .
 	docker push showroom/ui
