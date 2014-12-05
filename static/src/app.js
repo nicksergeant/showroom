@@ -10,6 +10,8 @@ var NotFoundRoute = Router.NotFoundRoute;
 var Route = Router.Route;
 var RouteHandler = Router.RouteHandler;
 
+console.log('it works');
+
 var request = function(url, plainText) {
   var deferred = Q.defer();
   var req = new XMLHttpRequest();
