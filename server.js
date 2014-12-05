@@ -17,21 +17,17 @@ app.use('/static', express.static(__dirname + '/static'));
 
 app.get('/api/vehicles', function(req, res) {
   if (vehicles.length) return res.json(vehicles);
-
   request('http://showroom.broker.is/api/items', function(err, response, body) {
     vehicles = JSON.parse(body.replace(")]}',", ''));
     res.send(vehicles);
   });
-
 });
 app.get('/*', function(req, res) {
-
   var bundleModifiedTime = fs.statSync(__dirname + '/static/dist/bundle.min.js').mtime.getTime() / 1000;
-
   res.render('base.html', {
-    bundleModifiedTime: bundleModifiedTime
+    bundleModifiedTime: bundleModifiedTime,
+    env: app.get('env')
   });
-
 });
 
 app.listen(8888);

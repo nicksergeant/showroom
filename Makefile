@@ -1,4 +1,4 @@
-all:
+compile:
 	jsx static/src static/build
 	browserify static/build/app.js -o static/dist/bundle.js
 	node_modules/jsmin/bin/jsmin static/dist/bundle.js > static/dist/bundle.min.js
@@ -13,7 +13,7 @@ deploy:
 restart:
 	ssh root@server.showroom.is 'docker restart $$(docker ps -q)'
 
-watch:
+run:
 	fswatch -o --latency=0.1 static/src | xargs -n1 -I{all} make
 
-.PHONY: all deploy restart watch
+.PHONY: compile deploy restart run

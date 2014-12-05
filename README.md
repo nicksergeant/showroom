@@ -3,21 +3,18 @@ Showroom UI
 
 The UI for [Showroom](http://showroom.is).
 
-### Run from build:
+### Install dependencies:
 
-1. `docker run -p 8888:8888 showroom/ui`
+1. `npm install -g browserify jsmin react-tools`
+2. `brew install fswatch`
 
-### Run from source:
+### Run and develop locally:
 
-1. `git clone https://github.com/showrm/ui.git`
-2. `cd ui`
-3. `npm install`
-4. `node server`
+1. `make run`
 
 ### Compile:
 
-1. `npm install -g browserify jsmin react-tools`
-2. `make`
+2. `make compile`
 
 ### Watch:
 

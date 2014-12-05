@@ -14,7 +14,11 @@
 
   <div id="app"></div>
 
+  <% if (env === 'development') { %>
+  <script type="text/javascript" src="/static/dist/bundle.js"></script>
+  <% } else { %>
   <script type="text/javascript" src="/static/dist/bundle.min.js?<%= bundleModifiedTime %>"></script>
+  <% } %>
 
 </body>
 </html>
