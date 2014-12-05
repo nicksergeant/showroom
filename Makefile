@@ -1,4 +1,5 @@
 deploy:
+	node_modules/browserify/bin/cmd.js -t reactify static/src/app.js -o static/bundle.js
 	docker build -t showroom/ui .
 	docker push showroom/ui
 	ssh root@server.showroom.is 'docker pull showroom/ui'
