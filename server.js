@@ -25,9 +25,7 @@ app.get('/api/vehicles', function(req, res) {
   });
 });
 app.get('/*', function(req, res) {
-  var bundleModifiedTime = fs.statSync(__dirname + '/static/dist/bundle.min.js').mtime.getTime() / 1000;
   res.render('base.html', {
-    bundleModifiedTime: bundleModifiedTime,
     env: app.get('env')
   });
 });
