@@ -4,6 +4,7 @@ var compress = require('compression');
 var ejs = require('ejs');
 var express = require('express');
 var fs = require('fs');
+var morgan = require('morgan');
 var request = require('request');
 
 var app = express();
@@ -13,6 +14,7 @@ app.engine('html', ejs.renderFile);
 app.set('view engine', 'ejs');
 
 app.use(compress());
+app.use(morgan('dev'));
 app.use('/static', express.static(__dirname + '/static'));
 
 app.get('/api/vehicles', function(req, res) {

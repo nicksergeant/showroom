@@ -14,6 +14,7 @@ restart:
 	ssh root@server.showroom.is 'docker restart $$(docker ps -q)'
 
 run:
+	nodemon --ignore static/ &
 	fswatch -o --latency=0.1 static/src | xargs -n1 -I{all} make
 
 .PHONY: compile deploy restart run

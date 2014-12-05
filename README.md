@@ -10,13 +10,8 @@ The UI for [Showroom](http://showroom.is).
 
 ### Run and develop locally:
 
-1. `make run`
+- `make run`
 
 ### Compile:
 
-2. `make compile`
-
-### Watch:
-
-1. `brew install fswatch`
-2. `make watch`
+- `make compile`
