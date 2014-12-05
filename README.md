@@ -5,9 +5,8 @@ The UI for [Showroom](http://showroom.is).
 
 ### Run and develop locally:
 
-1. `npm install -g browserify watchify`
-2. `npm install`
-3. `make run`
+1. `npm install`
+2. `make run`
 
 ### Prerequisites for deploying from a Mac:
 
