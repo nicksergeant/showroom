@@ -10,6 +10,6 @@ restart:
 
 run:
 	nodemon --ignore static/ &
-	node_modules/watchify/bin/cmd.js -t reactify static/src/app.js -o static/dist/bundle.js -v
+	node_modules/watchify/bin/cmd.js -t reactify static/src/app.js -o static/bundle.js -v
 
 .PHONY: deploy restart run

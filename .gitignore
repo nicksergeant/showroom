@@ -1,4 +1,5 @@
 node_modules
 static/.module-cache
 static/build/.module-cache
-static/dist
+static/build/bundle.js
+static/build/bundle.min.js
