@@ -1,0 +1,77 @@
+/* Showrm Theme Styles */
+
+// Colors
+$dark-gray: #374247;
+$light-gray: #EEF2F5;
+
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+
+$font-base: 16px;
+$font-base-line-height: 24px;
+
+@function em($target, $context: $font-base) {
+   @return #{$target / $context}em;
+}
+
+body {
+  background-color: $light-gray;
+  color: #333;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: $font-base;
+  font-weight: 400;
+  padding: 180px 0 0 0; // space for fixed header + filters
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: em(42px);
+}
+
+h2 { 
+  margin-top: 35px;
+}
+
+
+
+// Buttons
+.btn {
+  border: 1px solid #fff;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+
+  &.-outline {
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255, 0.35);
+    color: #fff;
+  }
+
+  &.-white {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: $dark-gray;
+  }
+}
+
+
+// Helpers 
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.right {
+  float: right;
+  clear: left;
+}
+
+.left {
+  float: left;
+  clear: right;
+}
