@@ -1,0 +1,100 @@
+/* Layout Styles */
+
+// Grid Settings
+$grid-columns: 12;
+$gutter: 1rem; // Implemented as padding
+$max-width: 95%; // Can be set to px or %
+
+@function columns($number, $grid-size: $grid-columns) {
+   @return percentage($number / $grid-size);
+}
+
+.columns {
+  box-sizing: border-box;
+  float: left;
+  padding: 0 $gutter;
+  position: relative;
+}
+.columns:last-child {
+  float: right;
+}
+.columns.end {
+  float: left;
+}
+.columns.centered {
+  float: none; 
+  margin: 0 auto;
+}
+.row {
+  margin: 0 auto;
+  max-width: $max-width;
+  width: auto;
+}
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.row .row { // Nested columns
+  margin-right: (-$gutter);
+  margin-left: (-$gutter);
+  max-width: none;
+  width: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  @for $i from 1 through $grid-columns {
+    .columns.large-#{$i} { width: columns($i); }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .columns.offset-#{$i} { margin-left: columns($i); }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .columns.push-#{$i} { left: columns($i); }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .columns.pull-#{$i} { right: columns($i); }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .columns {
+    width: 100%;
+  }
+  .columns.small-1 {
+    width: columns(3); // 25%
+  }
+  .columns.small-2 {
+    width: columns(6); // 50%
+  }
+  .columns.small-3 {
+    width: columns(9); // 75%
+  }
+  .columns.small-4 {
+    width: columns(12); // 100%
+  }
+}
+
+.block-grid { display: block; margin: 0 -10px; overflow: hidden; padding: 0; }
+.block-grid > li { box-sizing: border-box; display: block; height: auto; float: left; }
+
+.block-grid.two-items > li { width: 50%; padding: 0 10px 10px; }
+.block-grid.two-items > li:nth-child(2n+1) { clear: both; }
+
+.block-grid.three-items > li { width: 33.33333%; padding: 0 10px 10px; }
+.block-grid.three-items > li:nth-child(3n+1) { clear: both; }
+
+.block-grid.four-items > li { width: 25%; padding: 0 10px 10px; }
+.block-grid.four-items > li:nth-child(4n+1) { clear: both; }
+
+.block-grid.five-items > li { width: 20%; padding: 0 10px 10px; }
+.block-grid.five-items > li:nth-child(5n+1) { clear: both; }
+
+.block-grid.six-items > li { width: 16.66667%; padding: 0 10px 10px; }
+.block-grid.six-items > li:nth-child(6n+1) { clear: both; }
+

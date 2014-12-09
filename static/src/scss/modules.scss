@@ -1,0 +1,76 @@
+/* Showrm module styles */
+
+#main-header {
+  background-color: $dark-gray;
+  color: #fff;
+  height: 50px;
+  padding: 1.25rem 0;
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+  z-index: 2;
+
+  h1 {
+    background: url(/static/src/img/logo.png) left top no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    margin: 0;
+    max-width: 200px;
+    min-height: 50px;
+    padding: 0;
+  }
+
+  nav {
+    display: inline-block;
+    min-height: 50px;
+  //  padding: 1rem;
+    text-align: right;
+    
+    .btn {
+      margin-left: 0.75rem;
+    }
+  }
+
+  &.hidden {
+    top: -90px;
+    & + .filter-bar { // Adjust filter-bar position when main-header hides
+      top: 0;
+    }
+  }
+}
+
+/* Filter Bar */
+.filter-bar {
+  background-color: $light-gray;
+  border-bottom: 1px solid darken($light-gray, 7);
+  height: 30px;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 90px;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+  z-index: 2;
+}
+
+
+.vehicle {
+  background: #fff;
+  margin-top: 2rem;
+  img {
+    max-width: 100%;
+  }
+}
+.vehicle-details {
+  padding: 1rem;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+}
