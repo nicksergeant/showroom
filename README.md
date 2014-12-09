@@ -19,7 +19,7 @@ The UI for [Showroom](http://showroom.is).
 5. Run `docker login` and use your [Docker Hub](https://hub.docker.com/account/signup/) credentials.
 
 
-### Troubleshooting
+### Troubleshooting:
 
 - You may need to `boot2docker stop` and `boot2docker download` to get a fresh boot2docker image.
 - You may need to run `boot2docker start` periodically after your computer sleeps and such.
