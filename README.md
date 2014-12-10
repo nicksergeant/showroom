@@ -1,7 +1,7 @@
 Showroom UI
 ===========
 
-The UI for [Showroom](http://showroom.is).
+The UI for [Showroom](https://new.showroom.is).
 
 ### Run:
 
