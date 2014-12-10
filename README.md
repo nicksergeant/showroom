@@ -37,4 +37,4 @@ in the following format:
 
 To get Slack notifications when containers start, stop, etc:
 
-- `docker run --name=slack-docker -d --restart=always -e webhook=<webhookurl> -v /var/run/docker.sock:/var/run/docker.sock int128/slack-docker`
+- `docker run --name=slack-docker -d --restart=always -e webhook=<webhookurl> -v /var/run/docker.sock:/var/run/docker.sock nicksergeant/slack-docker`
