@@ -3,12 +3,12 @@ Showroom UI
 
 The UI for [Showroom](https://new.showroom.is).
 
-### Run:
+### Running
 
 1. `npm install`
 2. `make run`
 
-### Deploy:
+### Deploying
 
 A new Docker build is triggered upon Git push, and we run a [Conduit](https://github.com/ehazlett/conduit)
 container on the server that will auto-refresh the app container after the build
@@ -16,7 +16,7 @@ is finished.
 
 You can view the status of any builds in progress on [Docker Hub](https://registry.hub.docker.com/u/showroom/ui/builds_history/96275/).
 
-### Provision:
+### Provisioning
 
 To provision a new server for auto deployment, run the app container:
 
@@ -33,8 +33,8 @@ in the following format:
 
 - `http://server.showroom.is:8080/?token=<token>`
 
-### Slack notifications:
+### Slack notifications
 
-To get a Slack notifications when containers start, stop, etc:
+To get Slack notifications when containers start, stop, etc:
 
 - `docker run --name=slack-docker -d --restart=always -e webhook=<webhookurl> -v /var/run/docker.sock:/var/run/docker.sock int128/slack-docker`
