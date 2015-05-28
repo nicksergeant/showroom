@@ -1,7 +1,7 @@
 Showroom UI
 ===========
 
-The UI for [Showroom](https://new.showroom.is).
+A new Showroom.is UI that is in-progress.
 
 ### Running
 
